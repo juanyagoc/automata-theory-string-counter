@@ -1,0 +1,35 @@
+cabal-version:      3.0
+name:               number-of-strings
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             juanyagoc
+maintainer:         juanyago2106@gmail.com
+-- copyright:
+category:           Regular Expresions and Languages
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+common warnings
+    ghc-options: -Wall
+
+executable number-of-strings
+    import:           warnings
+    main-is:          Main.hs
+    other-modules:    Counter, AFD, Regex, AutomataToRegex, AutomataToRegexG, Examples
+    build-depends:    deepseq ^>=1.4.8.1, base ^>=4.18.3.0, containers, criterion
+    hs-source-dirs:   app
+    default-language: Haskell2010
+
+benchmark medir-hopcroft
+    import:           warnings
+    type:             exitcode-stdio-1.0
+    main-is:          Bench.hs
+    -- Si Bench.hs necesita importar AFD, Examples, etc., los pones aquí:
+    other-modules:    AFD, Examples 
+    build-depends:    base ^>=4.18.3.0, containers, criterion, deepseq
+    hs-source-dirs:   app
+    default-language: Haskell2010
