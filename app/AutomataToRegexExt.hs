@@ -1,4 +1,4 @@
-module AutomataToRegexG where
+module AutomataToRegexExt where
 
 import qualified Data.Map as M
 import AFD

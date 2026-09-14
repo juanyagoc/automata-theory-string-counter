@@ -1,8 +1,13 @@
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE DeriveAnyClass #-}
+
 module AFD (Automata (..), accepts, simpHopcroft) where
 
 import Data.List (foldl') 
 import qualified Data.Set as Set
 import qualified Data.Map as Map
+import GHC.Generics (Generic)
+import Control.DeepSeq (NFData)
 
 ------------------------------------------------------
 -- Definicion de un AFD con un alfabeto de Caracteres
@@ -15,7 +20,7 @@ data Automata a = Automata
     inicial  :: a,
     finales  :: [a]
   }
-  deriving (Show, Eq)
+  deriving (Show, Eq, Generic, NFData)
 
 --------------------------------------------------
 -- Test de aceptacion de una palabra sobre un AFD

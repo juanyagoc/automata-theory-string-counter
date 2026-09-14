@@ -2,13 +2,13 @@ module Regex (Regex(..), rUnion, rConcat, star, showRegex, simplify) where
 
 -- Definición de Regex
 data Regex
-    = Empty              -- La expresión vacía
-    | Epsilon            -- La palabra nula
-    | Symbol Char        -- Un símbolo
-    | Union Regex Regex  -- Una unión
-    | Concat Regex Regex -- Una concatenación
-    | Star Regex         -- La clausura estrella
-    deriving (Show, Eq)  -- Permite imprimirse y compararse
+    = Empty              -- expresión vacía
+    | Epsilon            -- palabra nula
+    | Symbol Char        -- símbolo
+    | Union Regex Regex  -- unión
+    | Concat Regex Regex -- concatenación
+    | Star Regex         -- clausura estrella
+    deriving (Show, Eq)  -- se puede imprimir y comparar
 
 
 -- Unión de dos regex

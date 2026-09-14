@@ -14,9 +14,9 @@ automataGrande n = Automata
 
 main :: IO ()
 main = do
-  let aut100   = generarAutomataGrande 100
-  let aut1000  = generarAutomataGrande 1000
-  let aut10000 = generarAutomataGrande 10000
+  let aut100   = automataGrande 100
+  let aut1000  = automataGrande 1000
+  let aut10000 = automataGrande 10000
 
   defaultMain [
     bgroup "Hopcroft Minimization" [
@@ -24,4 +24,4 @@ main = do
     , bench "1000 estados"  $ nf simpHopcroft aut1000
     , bench "10000 estados" $ nf simpHopcroft aut10000
     ]
-  ]
+    ]

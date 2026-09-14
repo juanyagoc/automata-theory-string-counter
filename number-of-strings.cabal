@@ -19,7 +19,7 @@ common warnings
 executable number-of-strings
     import:           warnings
     main-is:          Main.hs
-    other-modules:    Counter, AFD, Regex, AutomataToRegex, AutomataToRegexG, Examples
+    other-modules:    Counter, AFD, Regex, AutomataToRegex, AutomataToRegexExt, Examples
     build-depends:    deepseq ^>=1.4.8.1, base ^>=4.18.3.0, containers, criterion
     hs-source-dirs:   app
     default-language: Haskell2010
