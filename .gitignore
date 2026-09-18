@@ -32,3 +32,6 @@
 
 # Cabal
 dist-newstyle/
+
+# Git
+.gitattributes
